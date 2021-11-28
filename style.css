@@ -1,0 +1,91 @@
+body{
+    background-image: linear-gradient(rgba(62, 20, 20, 0.4), rgba(62, 20, 20, 0.4)),url('back.jpg');
+}
+.player_tab{
+    width: 80%;
+    height: 90vh;
+    margin: auto;
+    margin-top: 5vh;
+    background: linen;
+    justify-content: center;
+    text-align: center;
+}
+.player_one{
+    float: left;
+    background: #20B2AA;
+    width: 50%;
+    height: 100%;
+}
+.player_two{
+    float: right;
+    background: #2E8B57;
+    width: 50%;
+    height: 100%;
+}
+/* .middle-btn{
+    width: 20%;
+    height: 90vh;
+    position: relative;
+    margin: auto;
+    background: white;
+    text-align: center;
+    justify-content: center;
+} */
+button{
+    position: absolute;
+    left: 45%;
+    padding: 10px 25px;
+    border: none;
+    background: transparent;
+    font-size: 18px;
+}
+button:hover{
+    cursor: pointer;
+    font-family: 'Lucida Sans';
+    font-weight: 400;
+    
+}
+.btn_new{
+    top: 50px;
+}
+.btn_roll{
+    bottom: 140px;
+}
+.btn_hold{
+    bottom: 70px;
+    left: 46.5%;
+}
+.dice{
+    position: absolute;
+    top: 160px;
+    left: 46.5%;
+    height: 100px;
+    width: 100px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.p_title{
+    margin-top: 20vh;
+    font-size: 40px;
+    font-weight: 500;
+}
+.p_score{
+    padding-top: 30px;
+    font-size: 50px;
+    padding-bottom: 40px;
+    /* font-weight: 500; */
+}
+.current_score{
+    text-align: center;
+    margin: auto;
+    background: white;
+    color: black;
+    width: 30%;
+}
+.current_score p:first-child{
+    padding-top: 10px;
+}
+.current_score p:last-child{
+    font-size: 40px;
+    font-weight: lighter;
+    padding-bottom: 10px;
+}
