@@ -74,17 +74,26 @@ button:hover{
     padding-bottom: 40px;
     /* font-weight: 500; */
 }
-.current_score{
+.current_score-1, .current_score-2 {
     text-align: center;
     margin: auto;
     background: white;
     color: black;
     width: 30%;
 }
-.current_score p:first-child{
+.current_score-1 p:first-child{
     padding-top: 10px;
 }
-.current_score p:last-child{
+.current_score-1 p:last-child{
+    font-size: 40px;
+    font-weight: lighter;
+    padding-bottom: 10px;
+}
+
+.current_score-2 p:first-child{
+    padding-top: 10px;
+}
+.current_score-2 p:last-child{
     font-size: 40px;
     font-weight: lighter;
     padding-bottom: 10px;
