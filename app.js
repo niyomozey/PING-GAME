@@ -4,17 +4,46 @@ let activePlayer = 1;
 let dice = Math.floor(Math.random() * 6 + 1);
 
 // Function to roll the dice
+// function rollDice() {
+//     // Simulating a dice roll (1-6)
+//     dice = Math.floor(Math.random() * 6 + 1);
+//     document.querySelector('.dice').src = 'dice-' + dice + '.png';
+
+//     if (dice !== 1) {
+//         updateRoundScore();
+//     } else {
+//         switchPlayer(); // Switch player when rolling a 1
+//     }
+// }
 function rollDice() {
-    // Simulating a dice roll
-    dice = Math.floor(Math.random() * 6 + 1);
+    // Generate a random number between 0 and 1
+    let randomNum = Math.random();
+    console.log(randomNum)
+
+    // Skew the probability so that 1 appears twice as often as other numbers
+    if (randomNum < 2 / 7) { 
+        dice = 1; // 2/7 chance to get a 1
+    } else if (randomNum < 3 / 7) {
+        dice = 2;
+    } else if (randomNum < 4 / 7) {
+        dice = 3;
+    } else if (randomNum < 5 / 7) {
+        dice = 4;
+    } else if (randomNum < 6 / 7) {
+        dice = 5;
+    } else {
+        dice = 6;
+    }
+
     document.querySelector('.dice').src = 'dice-' + dice + '.png';
 
-    if (dice !== 0) {
+    if (dice !== 1) {
         updateRoundScore();
     } else {
-        switchPlayer();
+        switchPlayer(); // Switch player when rolling a 1
     }
 }
+
 
 // Function to update round score
 function updateRoundScore() {
@@ -23,7 +52,7 @@ function updateRoundScore() {
     highlightCurrentPlayer(activePlayer);
 }
 
-// Function to switch player when dice is zero
+// Function to switch player when dice is 1
 function switchPlayer() {
     roundScore = 0;
     document.querySelector('#roundScore-' + activePlayer).innerHTML = 0;
